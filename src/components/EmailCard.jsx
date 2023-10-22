@@ -22,9 +22,11 @@ const EmailCard = ({ name, email, subject, date, desc, id }) => {
             }}
           >
             <div
-              className={`mt-8 mb-1 h-36 mr-2 p-2 rounded-lg border-2 border-gray-200 leading-8 py-8${
-                clicked ? "border-gray-500 bg-black-200" : "gray"
-              } flex items-center`}
+              className={`rounded-xl p-2 text-sm ${
+                !clicked
+                  ? "rounded-lg border-2 border-gray-200 m-6"
+                  : "bg-black-500 bg-gray-200 rounded-lg border-2 border-gray-300 m-6"
+              }`}
             >
               <div className="w-20 px-2 ">
                 <div
@@ -59,6 +61,7 @@ const EmailCard = ({ name, email, subject, date, desc, id }) => {
               changeDescription(id);
               changeName(name, formattedDate);
               console.log(sidebar);
+              window.scrollTo(0, 0);
             }}
           >
             <div className=" mt-8 mb-1 mr-2 p-2 rounded-lg border-2 gray flex items-center">
