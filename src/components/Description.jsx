@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
-const Description = ({ id, name }) => {
+const Description = ({ id, name, date }) => {
   const [emailContent, setEmailContent] = useState([]);
 
   useEffect(() => {
@@ -31,6 +31,10 @@ const Description = ({ id, name }) => {
           <text className="font-black-200 text-2xl font-semibold pl-5">
             {" "}
             {name}
+          </text>
+          <br />
+          <text className="font-black-200 m-t-8 font-semibold pl-5">
+            {date}
           </text>
         </div>
       </div>
